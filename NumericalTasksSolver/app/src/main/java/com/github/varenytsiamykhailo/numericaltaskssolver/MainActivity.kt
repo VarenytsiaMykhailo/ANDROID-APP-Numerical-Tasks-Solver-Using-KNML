@@ -45,11 +45,13 @@ class MainActivity : AppCompatActivity() {
         )
 
 
-
+        /*
         println(result.vectorResult)
         println(result.isSuccessful)
         println(result.errorException)
         println(result.solutionObject!!.solutionString)
+
+         */
     }
 
 }

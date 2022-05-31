@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.github.varenytsiamykhailo.numericaltaskssolver.databinding.ActivitySystemSolvingMethodsBinding
-import com.github.varenytsiamykhailo.numericaltaskssolver.methodstypesactivities.systemsolvingmethods.GaussSimpleMethodActivity
+import com.github.varenytsiamykhailo.numericaltaskssolver.methodstypesactivities.systemsolvingmethods.InputSystemDataActivity
 
 class SystemSolvingMethodsActivity : AppCompatActivity() {
 
@@ -15,10 +15,34 @@ class SystemSolvingMethodsActivity : AppCompatActivity() {
         binding = ActivitySystemSolvingMethodsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.systemSolvingMethodsActivityGaussSimpleMethodButton.setOnClickListener {
-            val intent = Intent(this@SystemSolvingMethodsActivity, GaussSimpleMethodActivity::class.java)
+        setupViews()
+    }
+
+    private fun setupViews() {
+        binding.gaussSimpleMethodButton.setOnClickListener {
+            val intent = Intent(this@SystemSolvingMethodsActivity, InputSystemDataActivity::class.java)
+            intent.putExtra("methodName", "gaussSimpleMethod")
             startActivity(intent)
         }
+
+        binding.thomasMethodButton.setOnClickListener {
+            val intent = Intent(this@SystemSolvingMethodsActivity, InputSystemDataActivity::class.java)
+            intent.putExtra("methodName", "thomasMethod")
+            startActivity(intent)
+        }
+
+        binding.jacobiMethodButton.setOnClickListener {
+            val intent = Intent(this@SystemSolvingMethodsActivity, InputSystemDataActivity::class.java)
+            intent.putExtra("methodName", "jacobiMethod")
+            startActivity(intent)
+        }
+
+        binding.seidelMethodButton.setOnClickListener {
+            val intent = Intent(this@SystemSolvingMethodsActivity, InputSystemDataActivity::class.java)
+            intent.putExtra("methodName", "seidelMethod")
+            startActivity(intent)
+        }
+
     }
 
 }

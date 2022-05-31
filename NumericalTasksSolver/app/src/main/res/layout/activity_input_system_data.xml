@@ -4,7 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".methodstypesactivities.systemsolvingmethods.GaussSimpleMethodActivity">
+    tools:context=".methodstypesactivities.systemsolvingmethods.InputSystemDataActivity">
+
+    <TextView
+        android:id="@+id/chosenMethod_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/matrixSizeSetupSection_LinearLayout"
@@ -15,7 +24,7 @@
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/chosenMethod_TextView">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -83,13 +92,14 @@
 
         <HorizontalScrollView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -104,9 +114,8 @@
                     android:id="@+id/gridLayoutOfMatrixA"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="6dp">
+                    android:layout_marginStart="6dp" />
 
-                </GridLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -120,9 +129,8 @@
                     android:id="@+id/gridLayoutOfVectorB"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="6dp">
+                    android:layout_marginStart="6dp" />
 
-                </GridLayout>
 
             </LinearLayout>
         </HorizontalScrollView>
@@ -133,9 +141,10 @@
         android:id="@+id/solveSystem_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="solve system"
+        android:layout_marginTop="30dp"
+        android:text="next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="30dp"
         app:layout_constraintTop_toBottomOf="@id/verticalScrollView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

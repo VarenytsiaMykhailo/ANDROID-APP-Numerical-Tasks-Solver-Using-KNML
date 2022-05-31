@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NumericalTasksSolver">
         <activity
-            android:name=".methodstypesactivities.systemsolvingmethods.GaussSimpleMethodActivity"
+            android:name=".methodstypesactivities.AnswerSolutionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".methodstypesactivities.systemsolvingmethods.jacobiseidelmethods.JacobiSeidelMethodsSetupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".methodstypesactivities.systemsolvingmethods.InputSystemDataActivity"
             android:exported="false" />
         <activity
             android:name=".methodstypesactivities.IntegralMethodsActivity"
