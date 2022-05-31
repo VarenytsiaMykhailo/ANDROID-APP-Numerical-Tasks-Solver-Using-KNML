@@ -13,6 +13,7 @@ import android.view.Gravity
 import android.view.View
 import android.widget.Toast
 import com.github.varenytsiamykhailo.numericaltaskssolver.methodstypesactivities.systemsolvingmethods.jacobiseidelmethods.JacobiSeidelMethodsSetupActivity
+import com.github.varenytsiamykhailo.numericaltaskssolver.methodstypesactivities.systemsolvingmethods.othermethods.OtherMethodsSetupActivity
 
 
 class InputSystemDataActivity : AppCompatActivity() {
@@ -34,6 +35,15 @@ class InputSystemDataActivity : AppCompatActivity() {
     )
 
     private val DEFAULT_VECTOR_B: Array<Double> = arrayOf(20.0, -40.0, 28.0)
+
+    private val DEFAULT_MATRIX_A_FOR_THOMAS_METHOD: Array<Array<Double>> = arrayOf(
+        arrayOf(4.0, 1.0, 0.0, 0.0),
+        arrayOf(1.0, 4.0, 1.0, 0.0),
+        arrayOf(0.0, 1.0, 4.0, 1.0),
+        arrayOf(0.0, 0.0, 1.0, 4.0)
+    )
+
+    private val DEFAULT_VECTOR_B_FOR_THOMAS_METHOD: Array<Double> = arrayOf(5.0, 6.0, 6.0, 5.0)
 
     private lateinit var editTextsOfGridLayoutOfMatrixA: Array<Array<EditText>>
 
@@ -160,14 +170,28 @@ class InputSystemDataActivity : AppCompatActivity() {
             val methodName: String = this.intent.getStringExtra("methodName").toString()
             when (methodName) {
                 "gaussSimpleMethod" -> {
-
+                    val intent = Intent(
+                        this,
+                        OtherMethodsSetupActivity::class.java
+                    )
+                    intent.putExtra("methodName", "gaussSimpleMethod")
+                    intent.putExtra("matrixA", A)
+                    intent.putExtra("vectorB", B)
+                    startActivity(intent)
                 }
                 "thomasMethod" -> {
-
+                    val intent = Intent(
+                        this,
+                        OtherMethodsSetupActivity::class.java
+                    )
+                    intent.putExtra("methodName", "thomasMethod")
+                    intent.putExtra("matrixA", A)
+                    intent.putExtra("vectorB", B)
+                    startActivity(intent)
                 }
                 "jacobiMethod" -> {
                     val intent = Intent(
-                        this@InputSystemDataActivity,
+                        this,
                         JacobiSeidelMethodsSetupActivity::class.java
                     )
                     intent.putExtra("methodName", "jacobiMethod")
@@ -177,7 +201,7 @@ class InputSystemDataActivity : AppCompatActivity() {
                 }
                 "seidelMethod" -> {
                     val intent = Intent(
-                        this@InputSystemDataActivity,
+                        this,
                         JacobiSeidelMethodsSetupActivity::class.java
                     )
                     intent.putExtra("methodName", "seidelMethod")
@@ -198,8 +222,19 @@ class InputSystemDataActivity : AppCompatActivity() {
     }
 
     private fun setupDefaultValuesInGrids() {
-        val numOfRows: Int = DEFAULT_MATRIX_A.size
-        val numOfCols: Int = DEFAULT_MATRIX_A[0].size
+        val A: Array<Array<Double>>
+        val B: Array<Double>
+        val methodName: String = this.intent.getStringExtra("methodName").toString()
+        if (methodName == "thomasMethod") {
+            A = DEFAULT_MATRIX_A_FOR_THOMAS_METHOD
+            B = DEFAULT_VECTOR_B_FOR_THOMAS_METHOD
+        } else {
+            A = DEFAULT_MATRIX_A
+            B = DEFAULT_VECTOR_B
+        }
+
+        val numOfRows: Int = A.size
+        val numOfCols: Int = A[0].size
 
         binding.numOfRowsEditText.setText(numOfRows.toString())
         binding.numOfColumnsEditText.setText(numOfCols.toString())
@@ -208,12 +243,12 @@ class InputSystemDataActivity : AppCompatActivity() {
 
         for (i in 0 until numOfRows) {
             for (j in 0 until numOfCols) {
-                editTextsOfGridLayoutOfMatrixA[i][j].setText(DEFAULT_MATRIX_A[i][j].toString())
+                editTextsOfGridLayoutOfMatrixA[i][j].setText(A[i][j].toString())
             }
         }
 
         for (i in 0 until numOfRows) {
-            editTextsOfGridLayoutOfVectorB[i].setText(DEFAULT_VECTOR_B[i].toString())
+            editTextsOfGridLayoutOfVectorB[i].setText(B[i].toString())
         }
     }
 

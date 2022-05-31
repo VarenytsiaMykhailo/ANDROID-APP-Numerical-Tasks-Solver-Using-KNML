@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NumericalTasksSolver">
         <activity
+            android:name=".methodstypesactivities.systemsolvingmethods.othermethods.OtherMethodsSetupActivity"
+            android:exported="false" />
+        <activity
             android:name=".methodstypesactivities.AnswerSolutionActivity"
             android:exported="false" />
         <activity

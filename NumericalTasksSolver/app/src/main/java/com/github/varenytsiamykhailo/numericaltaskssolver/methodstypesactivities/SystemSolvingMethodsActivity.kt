@@ -20,25 +20,25 @@ class SystemSolvingMethodsActivity : AppCompatActivity() {
 
     private fun setupViews() {
         binding.gaussSimpleMethodButton.setOnClickListener {
-            val intent = Intent(this@SystemSolvingMethodsActivity, InputSystemDataActivity::class.java)
+            val intent = Intent(this, InputSystemDataActivity::class.java)
             intent.putExtra("methodName", "gaussSimpleMethod")
             startActivity(intent)
         }
 
         binding.thomasMethodButton.setOnClickListener {
-            val intent = Intent(this@SystemSolvingMethodsActivity, InputSystemDataActivity::class.java)
+            val intent = Intent(this, InputSystemDataActivity::class.java)
             intent.putExtra("methodName", "thomasMethod")
             startActivity(intent)
         }
 
         binding.jacobiMethodButton.setOnClickListener {
-            val intent = Intent(this@SystemSolvingMethodsActivity, InputSystemDataActivity::class.java)
+            val intent = Intent(this, InputSystemDataActivity::class.java)
             intent.putExtra("methodName", "jacobiMethod")
             startActivity(intent)
         }
 
         binding.seidelMethodButton.setOnClickListener {
-            val intent = Intent(this@SystemSolvingMethodsActivity, InputSystemDataActivity::class.java)
+            val intent = Intent(this, InputSystemDataActivity::class.java)
             intent.putExtra("methodName", "seidelMethod")
             startActivity(intent)
         }

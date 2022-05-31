@@ -58,7 +58,6 @@ class JacobiSeidelMethodsSetupActivity : AppCompatActivity() {
         }
 
         var formFullSolution: Boolean = false
-
         binding.formFullSolutionCheckBox.setOnCheckedChangeListener { buttonView, isChecked ->
             formFullSolution = isChecked
         }
@@ -144,7 +143,7 @@ class JacobiSeidelMethodsSetupActivity : AppCompatActivity() {
                 ?: "not required.") + "\n\n"
             resultString += "Solution result: " + vectorResultWithStatus.vectorResult + "\n"
         } else {
-            resultString += vectorResultWithStatus.errorException
+            resultString += vectorResultWithStatus.errorException?.message ?: "Exception with null message"
         }
         return resultString
     }
