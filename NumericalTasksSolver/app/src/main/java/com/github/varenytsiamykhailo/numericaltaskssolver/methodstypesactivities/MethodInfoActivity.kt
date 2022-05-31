@@ -40,6 +40,15 @@ class MethodInfoActivity : AppCompatActivity() {
             "seidelMethod" -> {
                 getString(R.string.seidel_method_description)
             }
+            "rectangleMethod" -> {
+                getString(R.string.rectangle_method_description)
+            }
+            "trapezoidMethod" -> {
+                getString(R.string.trapezoid_method_description)
+            }
+            "simpsonMethod" -> {
+                getString(R.string.simpson_method_description)
+            }
             else -> {
                 "Incorrect method name chosen."
             }

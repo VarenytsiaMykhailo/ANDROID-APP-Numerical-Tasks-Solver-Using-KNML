@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NumericalTasksSolver">
         <activity
+            android:name=".methodstypesactivities.integralsolvingmethods.InputIntegralDataActivity"
+            android:exported="false" />
+        <activity
             android:name=".methodstypesactivities.MethodInfoActivity"
             android:exported="false" />
         <activity

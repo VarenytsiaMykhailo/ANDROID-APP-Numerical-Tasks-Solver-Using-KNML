@@ -41,5 +41,29 @@
  \n* Asymptotic complexity: O(n^3)
     </string>
 
+    <string name="rectangle_method_description"> \n* The method of rectangles is a method of numerical integration of a function of one variable,
+ \n* which consists in replacing the integrand with a polynomial of degree zero, that is, a constant, on each elementary segment.
+ \n* If we consider the graph of the integrand, the method will consist in the approximate calculation of the area under
+ \n* the graph by summing the areas of a finite number of rectangles,
+ \n* the width of which will be determined by the distance between the corresponding neighboring integration nodes,
+ \n* and the height - by the value of the integrand at these nodes.
+ \n*
+ \n* Asymptotic complexity: O(n^2 * T(integralFunction)), where T - asymptotic complexity of the integral function.
+ \n* For example, if the asymptotic complexity of the integral function is O(n^3),
+ \n* then the asymptotic complexity of the rectangle method will be O(n^2 * n^3) = O(n^5)
+    </string>
 
+    <string name="trapezoid_method_description"> \n* The trapezoidal method is a method for the numerical integration of a function of one variable,
+ \n* which consists in replacing the integrand on each elementary segment of the integrand with a polynomial of the first degree,
+ \n* that is, a linear function. The area under the graph of the function is approximated by rectangular trapezoids.
+ \n*
+ \n* Asymptotic complexity: O(n^2 * T(integralFunction)), where T - asymptotic complexity of the integral function.
+    </string>
+
+    <string name="simpson_method_description"> \n* The Simpson method is a method for the numerical integration of a function of one variable.
+ \n* The essence of Simpson`s method is to approximate the integrand on a segment by an interpolation polynomial of the second degree,
+ \n* that is, to approximate the function graph on a segment by a parabola.
+ \n*
+ \n* Asymptotic complexity: O(n^2 * T(integralFunction)), where T - asymptotic complexity of the integral function.
+    </string>
 </resources>
