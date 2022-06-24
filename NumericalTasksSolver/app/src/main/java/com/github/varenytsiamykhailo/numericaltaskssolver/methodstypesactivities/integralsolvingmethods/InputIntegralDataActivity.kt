@@ -11,7 +11,9 @@ import com.github.varenytsiamykhailo.knml.integralmethods.TrapezoidMethod
 import com.github.varenytsiamykhailo.knml.util.results.DoubleResultWithStatus
 import com.github.varenytsiamykhailo.numericaltaskssolver.databinding.ActivityInputIntegralDataBinding
 import com.github.varenytsiamykhailo.numericaltaskssolver.methodstypesactivities.AnswerSolutionActivity
-import kotlin.math.exp
+import net.objecthunter.exp4j.Expression
+import net.objecthunter.exp4j.ExpressionBuilder
+import java.lang.Exception
 
 class InputIntegralDataActivity : AppCompatActivity() {
 
@@ -22,9 +24,6 @@ class InputIntegralDataActivity : AppCompatActivity() {
     private val DEFAULT_INTERVAL_START: String = "0.0"
 
     private val DEFAULT_INTERVAL_END: String = "1.0"
-
-    private val DEFAULT_INTEGRAL_FUNCTION: (x: Double) -> Double = { x -> exp(x) }
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -72,9 +71,34 @@ class InputIntegralDataActivity : AppCompatActivity() {
         }
 
         binding.solveIntegralButton.setOnClickListener {
-            var intervalStart: Double
-            try {
-                intervalStart = binding.intervalStartEditText.text.toString().toDouble()
+
+            val functionString: String = binding.functionEditText.text.toString()
+            val functionExpression: Expression = try {
+                ExpressionBuilder(functionString).variables("x").build()
+            } catch (e: Exception) {
+                Toast.makeText(
+                    this, "Incorrect function." + e.message,
+                    Toast.LENGTH_LONG
+                ).show()
+
+                return@setOnClickListener
+            }
+
+            val function: (x: Double) -> Double = { x ->
+                try {
+                    functionExpression.setVariable("x", x).evaluate()
+                } catch (e: Throwable) {
+                    if (e.message == "Division by zero!") {
+                        Double.POSITIVE_INFINITY
+                    } else {
+                        Double.NaN
+                    }
+                }
+            }
+
+
+            val intervalStart: Double = try {
+                binding.intervalStartEditText.text.toString().toDouble()
             } catch (e: NumberFormatException) {
                 Toast.makeText(
                     this, "Incorrect interval start value. Expected double/float type.",
@@ -84,9 +108,8 @@ class InputIntegralDataActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            var intervalEnd: Double
-            try {
-                intervalEnd = binding.intervalEndEditText.text.toString().toDouble()
+            val intervalEnd: Double = try {
+                binding.intervalEndEditText.text.toString().toDouble()
             } catch (e: NumberFormatException) {
                 Toast.makeText(
                     this, "Incorrect interval end value. Expected double/float type.",
@@ -120,7 +143,7 @@ class InputIntegralDataActivity : AppCompatActivity() {
                             intervalEnd,
                             eps,
                             formFullSolution,
-                            DEFAULT_INTEGRAL_FUNCTION
+                            function
                         )
 
                     val resultString: String = formResultString(result)
@@ -133,7 +156,7 @@ class InputIntegralDataActivity : AppCompatActivity() {
                             intervalEnd,
                             eps,
                             formFullSolution,
-                            DEFAULT_INTEGRAL_FUNCTION
+                            function
                         )
 
                     val resultString: String = formResultString(result)
@@ -146,7 +169,7 @@ class InputIntegralDataActivity : AppCompatActivity() {
                             intervalEnd,
                             eps,
                             formFullSolution,
-                            DEFAULT_INTEGRAL_FUNCTION
+                            function
                         )
 
                     val resultString: String = formResultString(result)

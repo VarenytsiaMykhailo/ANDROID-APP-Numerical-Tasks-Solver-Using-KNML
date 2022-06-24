@@ -23,6 +23,20 @@
             android:layout_marginTop="20dp" />
 
         <TextView
+            android:id="@+id/functionInput_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Enter the function: " />
+
+        <EditText
+            android:id="@+id/function_EditText"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="7 * cos*(x + 5) - log10(x) - sqrt(x)" />
+
+
+        <TextView
             android:id="@+id/chooseEps_TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
