@@ -21,9 +21,9 @@ class InputIntegralDataActivity : AppCompatActivity() {
 
     private val DEFAULT_EPS: String = "0.0001"
 
-    private val DEFAULT_INTERVAL_START: String = "0.0"
+    private val DEFAULT_INTERVAL_START: String = "1.0"
 
-    private val DEFAULT_INTERVAL_END: String = "1.0"
+    private val DEFAULT_INTERVAL_END: String = "5.0"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,10 +41,10 @@ class InputIntegralDataActivity : AppCompatActivity() {
                 "rectangle method"
             }
             "trapezoidMethod" -> {
-                "Trapezoid method"
+                "trapezoid method"
             }
             "simpsonMethod" -> {
-                "Simpson method"
+                "simpson method"
             }
             else -> {
                 "incorrect method type chosen"
@@ -119,7 +119,8 @@ class InputIntegralDataActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            var eps: Double = DEFAULT_EPS.toDouble()
+            // With machine eps methods dont work
+            var eps: Double? = 0.0001
             try {
                 if (!useMachineEps) {
                     eps = binding.epsEditText.text.toString().toDouble()

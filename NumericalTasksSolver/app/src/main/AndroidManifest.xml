@@ -11,31 +11,40 @@
         android:theme="@style/Theme.NumericalTasksSolver">
         <activity
             android:name=".methodstypesactivities.integralsolvingmethods.InputIntegralDataActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".methodstypesactivities.MethodInfoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".methodstypesactivities.systemsolvingmethods.othermethods.OtherMethodsSetupActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".methodstypesactivities.AnswerSolutionActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".methodstypesactivities.systemsolvingmethods.jacobiseidelmethods.JacobiSeidelMethodsSetupActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".methodstypesactivities.systemsolvingmethods.InputSystemDataActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".methodstypesactivities.IntegralMethodsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".methodstypesactivities.SystemSolvingMethodsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

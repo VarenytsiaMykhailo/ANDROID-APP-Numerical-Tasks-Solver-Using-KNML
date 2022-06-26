@@ -17,7 +17,7 @@
  \n*
  \n* Tridiagonal matrix is a band matrix that has nonzero elements on the main diagonal, the first diagonal below this, and the first diagonal above the main diagonal only.
  \n*
- \n* Asymptotic complexity: O(n) or O(n^2). O(n^2) is default, beacause by default this method implementation does validation of input matrix A, which must be tridiagonal.
+ \n* Asymptotic complexity: O(n) or O(n^2). O(n^2) is default, because by default this method implementation does validation of input matrix A, which must be tridiagonal.
  \n* You can get the required original asymptotic complexity O(n) by disabling validation, if you need to increase performance:
  \n* you can use increasePerformanceByIgnoringInputDataChecking flag by true, and validation will be disabled.
  \n* But you yourself have to take care of the correctness of the input data.
@@ -28,7 +28,7 @@
  \n* This algorithm is a stripped-down version of the Jacobi transformation method of matrix diagonalization.
  \n* The method is named after Carl Gustav Jacob Jacobi.
  \n*
- \n* Asymptotic complexity: O(n^3)
+ \n* Asymptotic complexity: O(n^3).
     </string>
 
     <string name="seidel_method_description"> \n* In numerical linear algebra, the Gauss–Seidel method, also known as the Liebmann method or the method of successive displacement,
@@ -38,7 +38,7 @@
  \n* Though it can be applied to any matrix with non-zero elements on the diagonals,
  \n* convergence is only guaranteed if the matrix is either strictly diagonally dominant, or symmetric and positive definite.
  \n*
- \n* Asymptotic complexity: O(n^3)
+ \n* Asymptotic complexity: O(n^3).
     </string>
 
     <string name="rectangle_method_description"> \n* The method of rectangles is a method of numerical integration of a function of one variable,
@@ -50,7 +50,7 @@
  \n*
  \n* Asymptotic complexity: O(n^2 * T(integralFunction)), where T - asymptotic complexity of the integral function.
  \n* For example, if the asymptotic complexity of the integral function is O(n^3),
- \n* then the asymptotic complexity of the rectangle method will be O(n^2 * n^3) = O(n^5)
+ \n* then the asymptotic complexity of the rectangle method will be O(n^2 * n^3) = O(n^5).
     </string>
 
     <string name="trapezoid_method_description"> \n* The trapezoidal method is a method for the numerical integration of a function of one variable,
