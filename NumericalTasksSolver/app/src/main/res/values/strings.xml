@@ -66,4 +66,24 @@
  \n*
  \n* Asymptotic complexity: O(n^2 * T(integralFunction)), where T - asymptotic complexity of the integral function.
     </string>
+
+    <string name="svenn_method_description"> \n* Svenn`s method is a heuristic method that determines an uncertainty interval containing a minimum extremum point.
+    </string>
+
+    <string name="golden_section_method_description"> \n* The golden-section search is a technique for finding an extremum (minimum or maximum)
+ \n* of a function inside a specified interval. For a strictly unimodal function with an extremum
+ \n* inside the interval, it will find that extremum, while for an interval containing multiple extrema
+ \n* (possibly including the interval boundaries), it will converge to one of them.
+ \n* If the only extremum on the interval is on a boundary of the interval,
+ \n* it will converge to that boundary point. The method operates by successively narrowing the
+ \n* range of values on the specified interval, which makes it relatively slow, but very robust.
+    </string>
+
+    <string name="fibonacci_method_description"> \n* The Fibonacci method is an improvement on the search implementation using the [GoldenSectionMethod],
+ \n* which is used to find the minimum / maximum of a function. Like the golden section method,
+ \n* it requires two evaluations of the function at the first iteration,
+ \n* and only one at each subsequent iteration. However, this method differs from the golden section
+ \n* method in that the reduction factor for the uncertainty interval varies from iteration to iteration.
+ \n* The method is based on the Fibonacci number sequence.
+    </string>
 </resources>

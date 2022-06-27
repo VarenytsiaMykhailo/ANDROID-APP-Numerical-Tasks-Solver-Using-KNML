@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.github.varenytsiamykhailo.numericaltaskssolver.databinding.ActivityMainBinding
 import com.github.varenytsiamykhailo.numericaltaskssolver.methodstypesactivities.IntegralMethodsActivity
+import com.github.varenytsiamykhailo.numericaltaskssolver.methodstypesactivities.OptimizationMethodsActivity
 import com.github.varenytsiamykhailo.numericaltaskssolver.methodstypesactivities.SystemSolvingMethodsActivity
 
 class MainActivity : AppCompatActivity() {
@@ -27,6 +28,11 @@ class MainActivity : AppCompatActivity() {
 
         binding.mainActivitySystemSolvingMethodsButton.setOnClickListener {
             val intent = Intent(this, SystemSolvingMethodsActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.mainActivityOptimizationMethodsButton.setOnClickListener {
+            val intent = Intent(this, OptimizationMethodsActivity::class.java)
             startActivity(intent)
         }
     }

@@ -29,5 +29,11 @@
             android:layout_height="wrap_content"
             android:text="System solving methods" />
 
+        <Button
+            android:id="@+id/mainActivity_OptimizationMethods_Button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Optimization methods" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

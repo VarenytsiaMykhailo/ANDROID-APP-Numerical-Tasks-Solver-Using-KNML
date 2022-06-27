@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NumericalTasksSolver">
         <activity
+            android:name=".methodstypesactivities.optimizationmethods.InputSvennMethodDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".methodstypesactivities.optimizationmethods.InputOptimizationDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".methodstypesactivities.OptimizationMethodsActivity"
+            android:exported="false" />
+        <activity
             android:name=".methodstypesactivities.integralsolvingmethods.InputIntegralDataActivity"
             android:exported="false"
             android:screenOrientation="portrait" />

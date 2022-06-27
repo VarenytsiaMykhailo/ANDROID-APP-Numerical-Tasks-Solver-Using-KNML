@@ -49,6 +49,15 @@ class MethodInfoActivity : AppCompatActivity() {
             "simpsonMethod" -> {
                 getString(R.string.simpson_method_description)
             }
+            "svennMethod" -> {
+                getString(R.string.svenn_method_description)
+            }
+            "goldenSectionMethod" -> {
+                getString(R.string.golden_section_method_description)
+            }
+            "fibonacciMethod" -> {
+                getString(R.string.fibonacci_method_description)
+            }
             else -> {
                 "Incorrect method name chosen."
             }
