@@ -20,7 +20,5 @@ class ExampleInstrumentedTest {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("com.github.varenytsiamykhailo.numericaltaskssolver", appContext.packageName)
-        println("_______bbbbbbb")
-
     }
 }
