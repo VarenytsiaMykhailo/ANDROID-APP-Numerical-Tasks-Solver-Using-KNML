@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">Numerical Tasks Solver</string>
+
+    <string name="gauss_classic_method_description"> \n* In mathematics, Gaussian elimination, also known as row reduction, is an algorithm for solving systems of linear equations.
+ \n* It consists of a sequence of operations performed on the corresponding matrix of coefficients.
+ \n* This is a method of successive elimination of variables, when, with the help of elementary transformations,
+ \n* the system of equations is reduced to an equivalent system of a triangular type,
+ \n* from which all the variables of the system are found sequentially, starting from the last (by number).
+ \n* This method is based on forward and backward sweeps.
+ \n*
+ \n* Asymptotic complexity: O(n^3).
+    </string>
+
+    <string name="thomas_method_description"> \n* In numerical linear algebra, the tridiagonal matrix algorithm, also known as the Thomas algorithm (named after Llewellyn Thomas),
+ \n* is a simplified form of Gaussian elimination that can be used to solve tridiagonal systems of equations.
+ \n* This method is based on forward and backward sweeps.
+ \n*
+ \n* Tridiagonal matrix is a band matrix that has nonzero elements on the main diagonal, the first diagonal below this, and the first diagonal above the main diagonal only.
+ \n*
+ \n* Asymptotic complexity: O(n) or O(n^2). O(n^2) is default, because by default this method implementation does validation of input matrix A, which must be tridiagonal.
+ \n* You can get the required original asymptotic complexity O(n) by disabling validation, if you need to increase performance:
+ \n* you can use increasePerformanceByIgnoringInputDataChecking flag by true, and validation will be disabled.
+ \n* But you yourself have to take care of the correctness of the input data.
+    </string>
+
+    <string name="jacobi_method_description"> \n* In numerical linear algebra, the Jacobi method is an iterative algorithm for determining the solutions of a strictly diagonally dominant system of linear equations.
+ \n* Each diagonal element is solved for, and an approximate value is plugged in. The process is then iterated until it converges.
+ \n* This algorithm is a stripped-down version of the Jacobi transformation method of matrix diagonalization.
+ \n* The method is named after Carl Gustav Jacob Jacobi.
+ \n*
+ \n* Asymptotic complexity: O(n^3).
+    </string>
+
+    <string name="seidel_method_description"> \n* In numerical linear algebra, the Gauss–Seidel method, also known as the Liebmann method or the method of successive displacement,
+ \n* is an iterative method used to solve a system of linear equations and is similar to the [JacobiMethod].
+ \n* The Gauss-Seidel method can be considered as a modification of the Jacobi method, which, as practice shows,
+ \n* requires approximately half the number of iterations compared to the Jacobi method.
+ \n* Though it can be applied to any matrix with non-zero elements on the diagonals,
+ \n* convergence is only guaranteed if the matrix is either strictly diagonally dominant, or symmetric and positive definite.
+ \n*
+ \n* Asymptotic complexity: O(n^3).
+    </string>
+
+    <string name="rectangle_method_description"> \n* The method of rectangles is a method of numerical integration of a function of one variable,
+ \n* which consists in replacing the integrand with a polynomial of degree zero, that is, a constant, on each elementary segment.
+ \n* If we consider the graph of the integrand, the method will consist in the approximate calculation of the area under
+ \n* the graph by summing the areas of a finite number of rectangles,
+ \n* the width of which will be determined by the distance between the corresponding neighboring integration nodes,
+ \n* and the height - by the value of the integrand at these nodes.
+ \n*
+ \n* Asymptotic complexity: O(n^2 * T(integralFunction)), where T - asymptotic complexity of the integral function.
+ \n* For example, if the asymptotic complexity of the integral function is O(n^3),
+ \n* then the asymptotic complexity of the rectangle method will be O(n^2 * n^3) = O(n^5).
+    </string>
+
+    <string name="trapezoid_method_description"> \n* The trapezoidal method is a method for the numerical integration of a function of one variable,
+ \n* which consists in replacing the integrand on each elementary segment of the integrand with a polynomial of the first degree,
+ \n* that is, a linear function. The area under the graph of the function is approximated by rectangular trapezoids.
+ \n*
+ \n* Asymptotic complexity: O(n^2 * T(integralFunction)), where T - asymptotic complexity of the integral function.
+    </string>
+
+    <string name="simpson_method_description"> \n* The Simpson method is a method for the numerical integration of a function of one variable.
+ \n* The essence of Simpson`s method is to approximate the integrand on a segment by an interpolation polynomial of the second degree,
+ \n* that is, to approximate the function graph on a segment by a parabola.
+ \n*
+ \n* Asymptotic complexity: O(n^2 * T(integralFunction)), where T - asymptotic complexity of the integral function.
+    </string>
+
+    <string name="svenn_method_description"> \n* Svenn`s method is a heuristic method that determines an uncertainty interval containing a minimum extremum point.
+    </string>
+
+    <string name="golden_section_method_description"> \n* The golden-section search is a technique for finding an extremum (minimum or maximum)
+ \n* of a function inside a specified interval. For a strictly unimodal function with an extremum
+ \n* inside the interval, it will find that extremum, while for an interval containing multiple extrema
+ \n* (possibly including the interval boundaries), it will converge to one of them.
+ \n* If the only extremum on the interval is on a boundary of the interval,
+ \n* it will converge to that boundary point. The method operates by successively narrowing the
+ \n* range of values on the specified interval, which makes it relatively slow, but very robust.
+    </string>
+
+    <string name="fibonacci_method_description"> \n* The Fibonacci method is an improvement on the search implementation using the [GoldenSectionMethod],
+ \n* which is used to find the minimum / maximum of a function. Like the golden section method,
+ \n* it requires two evaluations of the function at the first iteration,
+ \n* and only one at each subsequent iteration. However, this method differs from the golden section
+ \n* method in that the reduction factor for the uncertainty interval varies from iteration to iteration.
+ \n* The method is based on the Fibonacci number sequence.
+    </string>
+</resources>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".methodstypesactivities.SystemSolvingMethodsActivity">
+
+    <TextView
+        android:id="@+id/chooseMethodName_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="Choose the method:"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chooseMethodName_TextView">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/gaussSimpleMethodInfo_Button"
+                android:layout_width="36dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@android:drawable/ic_menu_help" />
+
+            <Button
+                android:id="@+id/gaussSimpleMethod_Button"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Gauss simple method" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/thomasMethodInfo_Button"
+                android:layout_width="36dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@android:drawable/ic_menu_help" />
+
+            <Button
+                android:id="@+id/thomasMethod_Button"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Thomas method" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/jacobiMethodInfo_Button"
+                android:layout_width="36dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@android:drawable/ic_menu_help" />
+
+            <Button
+                android:id="@+id/jacobiMethod_Button"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Jacobi method" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/seidelMethodInfo_Button"
+                android:layout_width="36dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@android:drawable/ic_menu_help" />
+
+            <Button
+                android:id="@+id/seidelMethod_Button"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Seidel method" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
