@@ -1,4 +1,4 @@
-package com.github.varenytsiamykhailo.numericaltaskssolver.integralsolvingmethods
+package com.github.varenytsiamykhailo.numericaltaskssolver.uiautomatortests.integralsolvingmethods
 
 import androidx.test.uiautomator.By
 import androidx.test.uiautomator.UiDevice
@@ -22,7 +22,7 @@ private const val INTEGRAL_METHODS_SCREEN_RECTANGLE_METHOD_BUTTON_TEXT = "RECTAN
 private const val INTEGRAL_METHODS_SCREEN_TRAPEZOID_METHOD_BUTTON_TEXT = "TRAPEZOID METHOD"
 private const val INTEGRAL_METHODS_SCREEN_SIMPSON_METHOD_BUTTON_TEXT = "SIMPSON METHOD"
 
-// Simpson method info screen values:
+// Method info screen values:
 private const val METHOD_INFO_SCREEN_METHOD_DESCRIPTION_TEXT_VIEW_TEXT =
     "Method description:"
 private const val METHOD_INFO_SCREEN_DESCRIPTION_TEXT_VIEW_RES_ID =

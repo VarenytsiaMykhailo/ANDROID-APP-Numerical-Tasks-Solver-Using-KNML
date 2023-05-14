@@ -1,4 +1,4 @@
-package com.github.varenytsiamykhailo.numericaltaskssolver.integralsolvingmethods
+package com.github.varenytsiamykhailo.numericaltaskssolver.uiautomatortests.integralsolvingmethods
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SdkSuppress
@@ -98,7 +98,7 @@ class MethodInfoScreenTest {
         private const val INTEGRAL_METHODS_SCREEN_SIMPSON_METHOD_INFO_BUTTON_RES_ID =
             "simpsonMethodInfo_Button"
 
-        // Simpson method info screen values:
+        // Method info screen values:
         private const val METHOD_INFO_SCREEN_METHOD_DESCRIPTION_TEXT_VIEW_TEXT =
             "Method description:"
         private const val METHOD_INFO_SCREEN_DESCRIPTION_TEXT_VIEW_RES_ID =

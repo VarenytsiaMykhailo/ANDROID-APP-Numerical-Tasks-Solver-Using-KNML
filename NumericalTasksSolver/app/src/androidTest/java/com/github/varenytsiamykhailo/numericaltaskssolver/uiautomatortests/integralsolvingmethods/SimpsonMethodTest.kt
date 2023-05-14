@@ -1,4 +1,4 @@
-package com.github.varenytsiamykhailo.numericaltaskssolver.integralsolvingmethods
+package com.github.varenytsiamykhailo.numericaltaskssolver.uiautomatortests.integralsolvingmethods
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SdkSuppress
@@ -36,6 +36,7 @@ class SimpsonMethodTest {
         functionEditText.click()
         functionEditText.text = "x^2"
         device.pressBack() // Close keyboard
+        Assert.assertEquals("x^2", functionEditText.text)
 
         // Trying to enable check box to form full solution:
         val formFullSolutionCheckBox: UiObject2 = device.findObject(

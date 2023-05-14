@@ -1,4 +1,4 @@
-package com.github.varenytsiamykhailo.numericaltaskssolver.integralsolvingmethods
+package com.github.varenytsiamykhailo.numericaltaskssolver.uiautomatortests.integralsolvingmethods
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SdkSuppress
