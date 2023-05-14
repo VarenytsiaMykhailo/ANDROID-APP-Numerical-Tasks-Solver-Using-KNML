@@ -52,12 +52,10 @@ class MethodInfoScreenTest {
 
         onView(withId(R.id.methodDescriptionTitle_TextView))
             .check(matches(isDisplayed()))
-        onView(withId(R.id.methodDescriptionTitle_TextView))
             .check(matches(withText(METHOD_INFO_SCREEN_METHOD_DESCRIPTION_TEXT_VIEW_TEXT)))
 
         onView(withId(R.id.description_TextView))
             .check(matches(isDisplayed()))
-        onView(withId(R.id.description_TextView))
             .check(
                 matches(
                     withText(
@@ -73,7 +71,6 @@ class MethodInfoScreenTest {
 
         onView(withId(R.id.textScale_SeekBar))
             .check(matches(isDisplayed()))
-        onView(withId(R.id.textScale_SeekBar))
             .perform(setProgress(90))
 
         Espresso.pressBack()

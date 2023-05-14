@@ -29,25 +29,32 @@ class CheckUiElementsOnTheIntegralMethodsScreenTest {
     }
 
     private fun checkUiElementsOnTheIntegralMethodsScreen() {
+        onView(withId(R.id.chooseMethodName_TextView))
+            .check(matches(isDisplayed()))
+            .check(matches(withText("Choose the method:")))
+
         onView(withId(R.id.rectangleMethodInfo_Button))
             .check(matches(isDisplayed()))
+            .check(matches(isClickable()))
         onView(withId(R.id.rectangleMethod_Button))
             .check(matches(isDisplayed()))
-        onView(withId(R.id.rectangleMethod_Button))
+            .check(matches(isClickable()))
             .check(matches(withText(INTEGRAL_METHODS_SCREEN_RECTANGLE_METHOD_BUTTON_TEXT)))
 
         onView(withId(R.id.trapezoidMethodInfo_Button))
             .check(matches(isDisplayed()))
+            .check(matches(isClickable()))
         onView(withId(R.id.trapezoidMethod_Button))
             .check(matches(isDisplayed()))
-        onView(withId(R.id.trapezoidMethod_Button))
+            .check(matches(isClickable()))
             .check(matches(withText(INTEGRAL_METHODS_SCREEN_TRAPEZOID_METHOD_BUTTON_TEXT)))
 
         onView(withId(R.id.simpsonMethodInfo_Button))
             .check(matches(isDisplayed()))
+            .check(matches(isClickable()))
         onView(withId(R.id.simpsonMethod_Button))
             .check(matches(isDisplayed()))
-        onView(withId(R.id.simpsonMethod_Button))
+            .check(matches(isClickable()))
             .check(matches(withText(INTEGRAL_METHODS_SCREEN_SIMPSON_METHOD_BUTTON_TEXT)))
     }
 

@@ -27,23 +27,17 @@ class CheckUiElementsOnTheMainScreenTest {
     private fun checkUiElementsOnTheMainScreen() {
         onView(withId(R.id.mainActivity_IntegralMethods_Button))
             .check(matches(isDisplayed()))
-        onView(withId(R.id.mainActivity_IntegralMethods_Button))
             .check(matches(isClickable()))
-        onView(withId(R.id.mainActivity_IntegralMethods_Button))
             .check(matches(withText(MAIN_SCREEN_INTEGRAL_METHODS_BUTTON_TEXT)))
 
         onView(withId(R.id.mainActivity_SystemSolvingMethods_Button))
             .check(matches(isDisplayed()))
-        onView(withId(R.id.mainActivity_IntegralMethods_Button))
             .check(matches(isClickable()))
-        onView(withId(R.id.mainActivity_SystemSolvingMethods_Button))
             .check(matches(withText(MAIN_SCREEN_SYSTEM_SOLVING_METHODS_BUTTON_TEXT)))
 
         onView(withId(R.id.mainActivity_OptimizationMethods_Button))
             .check(matches(isDisplayed()))
-        onView(withId(R.id.mainActivity_IntegralMethods_Button))
             .check(matches(isClickable()))
-        onView(withId(R.id.mainActivity_OptimizationMethods_Button))
             .check(matches(withText(MAIN_SCREEN_OPTIMIZATION_METHODS_BUTTON_TEXT)))
     }
 

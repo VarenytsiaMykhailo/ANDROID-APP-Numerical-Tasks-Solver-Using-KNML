@@ -54,7 +54,6 @@ class SimpsonMethodTest {
         // Check solution is correct:
         onView(withId(R.id.solution_TextView))
             .check(matches(withSubstring("Is successful: true")))
-        onView(withId(R.id.solution_TextView))
             .check(matches(withSubstring("num of splits")))
 
         // Trying to scroll solution down:
